@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>CarCare Privacy Policy</title>
+<meta name="description" content="What CarCare collects, why, who we share it with, and how to control it. Written to be read, not skimmed past.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --paper:#F3F5FA; --surface:#FFFFFF; --ink:#0A1F44; --ink-2:#4B5A7A; --line:#DCE2EE;
+  --navy:#0E2A63; --on-navy:#EAF0FA; --on-navy-2:#A9B8D6;
+  --orange:#F26A1B; --orange-ink:#BF4A08; --orange-soft:#FFE7D6;
+  --display:"Lexend","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Source Sans 3","Source Sans Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#06122B; --surface:#0C1D3F; --ink:#EEF2F9; --ink-2:#9DAAC4; --line:#1D3159;
+  --navy:#0F2C69; --orange:#FF7A2E; --orange-ink:#FF8E4F; --orange-soft:#3A2414; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#06122B; --surface:#0C1D3F; --ink:#EEF2F9; --ink-2:#9DAAC4; --line:#1D3159;
+  --navy:#0F2C69; --orange:#FF7A2E; --orange-ink:#FF8E4F; --orange-soft:#3A2414; color-scheme:dark}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:var(--orange-ink)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.025em;line-height:1.1;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.3rem,5vw,3.8rem);font-weight:800}
+h2{font-size:clamp(1.45rem,2.6vw,1.9rem);font-weight:700}
+h3{font-size:1.15rem;font-weight:700;letter-spacing:-.015em}
+p{margin:0}
+.eyebrow{font-family:var(--display);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-ink);font-weight:600;display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:3px;border-radius:3px;background:currentColor}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:70px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--display);font-weight:800;font-size:1.3rem;letter-spacing:-.03em}
+.brand svg{width:34px;height:38px;flex:none}
+.tld{color:var(--orange)}
+.nav-links{display:flex;gap:26px;margin-left:auto;font-family:var(--display);font-weight:500;font-size:.95rem}
+.nav-links a{text-decoration:none;color:var(--ink-2)}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--ink)}
+.nav-links a[aria-current]{box-shadow:inset 0 -3px 0 var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:.55em;font:600 .92rem/1 var(--display);padding:.7rem 1.15rem;min-height:44px;border-radius:999px;text-decoration:none;background:var(--orange);color:#fff}
+@media (max-width:760px){.nav-links{display:none}.nav .btn{margin-left:auto}}
+.page-head{padding-block:64px 40px;display:flex;flex-direction:column;gap:18px}
+.page-head .lede{font-size:1.2rem;color:var(--ink-2);max-width:60ch}
+.meta{font-size:.95rem;color:var(--ink-2)}
+.doc{display:grid;grid-template-columns:240px minmax(0,1fr);gap:56px;padding-bottom:96px;align-items:start}
+.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 92px);font-size:.93rem;max-height:calc(100vh - 120px);overflow:auto}
+.toc h2{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--ink-2);margin-bottom:12px}
+.toc ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;border-left:2px solid var(--line)}
+.toc a{display:block;padding:5px 0 5px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--ink-2);text-decoration:none;line-height:1.35}
+.toc a:hover{color:var(--ink);border-left-color:var(--orange)}
+@media (max-width:900px){.doc{grid-template-columns:1fr;gap:28px}.toc{position:static;max-height:none;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}}
+.body{display:flex;flex-direction:column;gap:48px;min-width:0;max-width:760px}
+.body section{display:flex;flex-direction:column;gap:16px;scroll-margin-top:90px}
+.body p,.body li{color:var(--ink-2)}
+.body strong{color:var(--ink)}
+.body ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:8px}
+.body h3{margin-top:8px}
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:14px;padding:20px 24px;display:flex;flex-direction:column;gap:10px}
+.callout.dark{background:var(--navy);border-color:var(--navy);border-left-color:var(--orange)}
+.callout.dark p,.callout.dark li,.callout.dark strong,.callout.dark h3{color:var(--on-navy)}
+.caps{text-transform:uppercase;font-size:.92rem;letter-spacing:.01em}
+.summary{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.summary div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+.summary b{font-family:var(--display);font-weight:600;font-size:1.02rem;color:var(--ink);letter-spacing:-.01em}
+.summary span{color:var(--ink-2);font-size:.97rem;line-height:1.5}
+@media (max-width:620px){.summary{grid-template-columns:1fr}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.93rem;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+th{font-family:var(--display);font-weight:600;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);background:color-mix(in srgb,var(--paper) 60%,var(--surface))}
+td{color:var(--ink-2)}
+tr:last-child td{border-bottom:0}
+td:first-child{color:var(--ink);font-weight:600}
+address{font-style:normal;color:var(--ink-2);line-height:1.6}
+/* about */
+.hero-about{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding-block:64px 72px}
+.hero-about img{width:100%;max-width:340px;justify-self:center;border-radius:28px;background:#fff;box-shadow:0 30px 60px -30px rgba(10,31,68,.45)}
+.hero-about .lede{font-size:1.25rem;color:var(--ink-2);max-width:54ch}
+@media (max-width:860px){.hero-about{grid-template-columns:1fr}.hero-about img{max-width:220px;justify-self:start}}
+.band{padding-block:0 88px}
+.math{background:var(--navy);color:var(--on-navy);border-radius:28px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.math .eyebrow{color:var(--orange)}
+.math p{color:var(--on-navy-2)}
+.eq{display:flex;flex-direction:column;gap:10px;font-family:var(--display)}
+.eq div{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.07);font-weight:600;font-variant-numeric:tabular-nums}
+.eq div:last-child{background:var(--orange);color:#fff}
+@media (max-width:860px){.math{grid-template-columns:1fr;padding:32px 22px}}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card p{color:var(--ink-2);font-size:1rem}
+@media (max-width:900px){.grid3{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.grid3{grid-template-columns:1fr}}
+.sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:32px;max-width:760px}
+.sec-head p{color:var(--ink-2);font-size:1.1rem}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:ph}
+.timeline .card{border-top:4px solid var(--line)}
+.timeline .card.now{border-top-color:var(--orange)}
+.tagline{font-family:var(--display);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.now .tagline{color:var(--orange-ink)}
+@media (max-width:860px){.timeline{grid-template-columns:1fr}}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:700px){.contact{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding-block:32px 40px;color:var(--ink-2);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer nav{display:flex;flex-wrap:wrap;gap:20px}
+footer a{color:var(--ink-2);text-decoration:none}
+footer a:hover{color:var(--orange-ink)}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html" aria-label="CarCare.help home"><svg viewBox="0 0 34 38" aria-hidden="true"><path d="M17 1 32 6v12c0 9.5-6.4 15.6-15 19C8.4 33.6 2 27.5 2 18V6z" fill="var(--navy)" stroke="var(--orange)" stroke-width="2"/><text x="17" y="24" text-anchor="middle" font-family="Lexend,Avenir Next,sans-serif" font-weight="800" font-size="12" fill="#fff">CC</text></svg><span>CarCare<span class="tld">.help</span></span></a>
+  <nav class="nav-links" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></nav>
+  <a class="btn" href="index.html#download">Get early access</a>
+</div></header>
+<main>
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow">Legal</span>
+    <h1>Privacy Policy</h1>
+    <p class="lede">What CarCare collects, why, who we share it with, and how to control it. Written to be read, not skimmed past.</p>
+    <p class="meta">Last updated October 18, 2026</p>
+  </div>
+  <div class="doc">
+    <nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#who-we-are">Who we are</a></li><li><a href="#information-we-collect">Information we collect</a></li><li><a href="#how-we-use-your-information">How we use your information</a></li><li><a href="#sensitive-information">Sensitive information</a></li><li><a href="#how-we-share-information">How we share information</a></li><li><a href="#aggregated-data">Aggregated data</a></li><li><a href="#how-long-we-keep-data">How long we keep data</a></li><li><a href="#your-choices">Your choices</a></li><li><a href="#your-privacy-rights">Your privacy rights</a></li><li><a href="#consumer-health-data">Consumer health data</a></li><li><a href="#security">Security</a></li><li><a href="#children">Children</a></li><li><a href="#do-not-track-and-global-privacy-control">Do Not Track and Global Privacy Control</a></li><li><a href="#users-outside-the-u-s">Users outside the U.S.</a></li><li><a href="#changes-to-this-policy">Changes to this policy</a></li><li><a href="#contact-us">Contact us</a></li></ol></nav>
+    <div class="body"><div class="summary" aria-label="Privacy at a glance">
+  <div><b>We don't sell your data</b><span>Not your trips, expenses, places or vehicle data. We don't share it for advertising either.</span></div>
+  <div><b>Location only with permission</b><span>Trip tracking starts after you allow it. You can pause it in one tap and delete any trip.</span></div>
+  <div><b>Your voice isn't recorded</b><span>We turn speech into text, keep the text, and discard the audio.</span></div>
+  <div><b>You label your places</b><span>We never guess what a place is. Medical and charity places get extra protection.</span></div>
+  <div><b>No device fingerprinting</b><span>We don't build a profile of your device to track you across accounts.</span></div>
+  <div><b>Three years, then gone</b><span>Records are kept for 3 years on every plan, and you can delete your account anytime.</span></div>
+</div><section id="who-we-are"><h2>Who we are</h2><p>CarCare.help is a car-ownership app made by Car Registration Help Inc. ("CarCare", "we", "us"). This policy explains what we collect when you use the CarCare app or website, why we collect it, and the choices you have.</p>
+<address>Car Registration Help Inc.<br>969 Story Rd, Unit 6021<br>San Jose, CA 95122<br><a href="mailto:contact@carcare.help">contact@carcare.help</a></address></section><section id="information-we-collect"><h2>Information we collect</h2><h3>Information you give us</h3>
+<ul>
+<li><strong>Account.</strong> Your name, email, password (stored hashed), or your Apple or Google sign-in. A phone number is optional and used only for SMS alerts, never to sign in.</li>
+<li><strong>Your situation.</strong> Whether you are self-employed, a business owner or a W-2 employee, so reports use the right rules. Your home time zone.</li>
+<li><strong>Vehicles.</strong> VIN, year, make, model, odometer readings, service history and documents you store in the Digital Glovebox, such as insurance cards and registration.</li>
+<li><strong>Expenses and receipts.</strong> Amounts, dates, merchants, categories and receipt photos.</li>
+<li><strong>Places.</strong> Names and categories you give to places you visit often, like "Delmar Dental, client". We only use the category you choose.</li>
+<li><strong>Emergency contacts and roadside details.</strong> Contacts you add, and your roadside, insurer or warranty phone numbers.</li>
+<li><strong>Messages.</strong> Questions you ask the AI Service Advisor and messages you send our support team.</li>
+</ul>
+<h3>Information collected when you use the app</h3>
+<ul>
+<li><strong>Location and trips.</strong> With your permission, the app uses your phone's location and motion sensors to detect drives, including in the background. It records start and end points, route, distance and time.</li>
+<li><strong>Voice.</strong> The microphone turns on only in Drive Mode or when you press and hold the talk button. CarCare never listens for a wake word. Speech is converted to text and the audio is discarded right away. We keep only the text and a confidence score with the trip or expense it created.</li>
+<li><strong>Device and diagnostics.</strong> Device model, operating system, app version, and crash reports.</li>
+</ul>
+<h3>Information from other services</h3>
+<ul>
+<li><strong>Apple and Google</strong> tell us your subscription status. We never receive your card or bank details.</li>
+<li><strong>Smartcar</strong>, if you connect your car on Plus or Pro, sends odometer, fuel or battery level.</li>
+<li><strong>QuickBooks or Xero</strong>, if you connect them, send the account details needed to post your records.</li>
+<li><strong>Vehicle databases</strong> return your car's details from its VIN.</li>
+</ul></section><section id="how-we-use-your-information"><h2>How we use your information</h2><ul>
+<li>To run the app: log trips, read receipts, calculate mileage and expense estimates, send service reminders, and create the reports and exports you ask for.</li>
+<li>To answer questions in the AI Service Advisor. On the free plan we don't send your personal data with the question. On Plus and Pro we include your vehicle and service history so answers fit your car.</li>
+<li>To share your location with the emergency contacts you choose, only when you start an emergency alert.</li>
+<li>To process subscriptions and referral rewards.</li>
+<li>To send alerts and account emails, and marketing email you can unsubscribe from.</li>
+<li>To keep CarCare secure, fix problems and improve the product.</li>
+<li>To meet legal obligations.</li>
+</ul>
+<p>We don't use your data to build advertising profiles, and we don't use voice audio, transcripts or your personal records to train AI models.</p></section><section id="sensitive-information"><h2>Sensitive information</h2><p>Some information is sensitive under privacy law: your precise location, the places you visit, places you label as <strong>medical</strong> or <strong>charitable</strong>, and records of an emergency incident.</p>
+<ul>
+<li>We use sensitive information only to provide the features you use. We don't use it to infer anything about you.</li>
+<li>Places labelled medical or charitable, and all incident data, are excluded from analytics and from any aggregated data. Support staff can't see them.</li>
+<li>CarCare never decides what a place is from its business name or from Google. The label comes from you or doesn't exist.</li>
+</ul></section><section id="how-we-share-information"><h2>How we share information</h2><div class="callout"><p><strong>We do not sell your personal information, and we do not share it for cross-context behavioral advertising.</strong> We haven't done so in the past 12 months. We don't share personal information with third parties for their own direct marketing.</p></div>
+<p>We share information only in these cases:</p>
+<ul>
+<li><strong>Service providers</strong> who process data for us under contract and may not use it for anything else. They are listed below.</li>
+<li><strong>Services you connect</strong>, such as QuickBooks, Xero or Smartcar, and only the data you choose to send.</li>
+<li><strong>People you choose</strong>: household members you share a vehicle with, emergency contacts, and anyone you send an export or report to, such as your accountant or employer.</li>
+<li><strong>Legal reasons</strong>: to comply with a valid legal request, or to protect someone's safety, our users or CarCare.</li>
+<li><strong>Business transfers</strong>: if CarCare is merged or sold, this policy continues to apply to your data.</li>
+</ul>
+<h3>Household sharing</h3>
+<p>Sharing a vehicle shares the vehicle profile, Glovebox documents, health alerts and service history. It never shares your trips, places, expenses, tax figures or subscription.</p>
+<h3>Service providers</h3>
+<div class="tbl"><table><thead><tr><th>Provider</th><th>What they do</th><th>Data involved</th></tr></thead><tbody><tr><td>Amazon Web Services</td><td>Cloud hosting and storage</td><td>All account and app data</td></tr><tr><td>Google Maps Platform</td><td>Maps, shop search, address lookup</td><td>Approximate or precise location while you search; search terms</td></tr><tr><td>Car API and NHTSA vPIC</td><td>Vehicle lookup from a VIN</td><td>VIN</td></tr><tr><td>Smartcar (Plus and Pro, when you connect it)</td><td>Connected-car data</td><td>Odometer, fuel or EV battery level from your car</td></tr><tr><td>Intuit QuickBooks and Xero (when you connect them)</td><td>Accounting sync</td><td>Expenses, mileage totals and categories you choose to push</td></tr><tr><td>Anthropic (Claude)</td><td>AI Service Advisor answers</td><td>Your question; on Plus and Pro, your vehicle and service context</td></tr><tr><td>Receipt OCR provider</td><td>Reading receipt images</td><td>Receipt photos</td></tr><tr><td>Twilio</td><td>SMS alerts and phone verification, if you add a phone</td><td>Phone number, alert text</td></tr><tr><td>SendGrid</td><td>Email</td><td>Email address, message content</td></tr><tr><td>Sentry</td><td>Crash and error reporting</td><td>Device type, app version, error logs</td></tr><tr><td>Customer support tool</td><td>Help requests</td><td>Messages you send us</td></tr><tr><td>Currency rate provider</td><td>Converting foreign-currency receipts</td><td>Amount and currency (no identity)</td></tr><tr><td>NREL Alternative Fuels Data Center</td><td>EV charging station data</td><td>Map area you search</td></tr><tr><td>Apple and Google</td><td>App distribution, subscriptions and billing</td><td>Subscription status (we never see your card number)</td></tr></tbody></table></div>
+<p>We'll update this list before adding a provider that handles personal data.</p></section><section id="aggregated-data"><h2>Aggregated data</h2><p>We may combine data from many users into statistics that can't identify anyone, for example which kinds of car services are searched most in a city. Place labels, medical and charitable places, and incident data are never included, even in anonymized form.</p></section><section id="how-long-we-keep-data"><h2>How long we keep data</h2><ul>
+<li><strong>Three years on every plan.</strong> Trips, expenses, receipts and reports are kept for three years, which matches how long the IRS can usually review a return. Free accounts don't lose data early.</li>
+<li><strong>Voice audio</strong> is never stored.</li>
+<li><strong>When you delete your account</strong>, we first offer you an export with a deadline. Then we delete your trips, expenses, receipts, vehicles, places and account. Some records are kept in a tamper-evident ledger. For those, we destroy the encryption key, so the remaining entry can't be read or linked to you.</li>
+<li><strong>Billing records</strong> required by law are kept separately for as long as the law requires.</li>
+</ul></section><section id="your-choices"><h2>Your choices</h2><ul>
+<li>Turn location access off, or pause tracking in one tap, at any time. Delete a single trip or your full history.</li>
+<li>Rename, recategorize, mute or delete any saved place. Deleting a place doesn't change your trips.</li>
+<li>Turn off voice, or simply don't use Drive Mode or the talk button.</li>
+<li>Remove a phone number, or reply STOP to any text to stop SMS alerts. Message and data rates may apply.</li>
+<li>Unsubscribe from marketing email using the link in any email.</li>
+<li>Disconnect QuickBooks, Xero or Smartcar from Settings.</li>
+</ul></section><section id="your-privacy-rights"><h2>Your privacy rights</h2><p>Wherever you live in the U.S., you can ask us to:</p>
+<ul>
+<li>tell you what personal information we have about you and give you a copy in a portable format;</li>
+<li>correct information that is wrong;</li>
+<li>delete your information;</li>
+<li>limit how we use sensitive information. We already limit it to providing the service.</li>
+</ul>
+<p>Most of this can be done in the app under Settings. You can also email <a href="mailto:contact@carcare.help">contact@carcare.help</a> or write to us at the address below. We'll confirm we received your request within 10 business days and respond within 45 days, or tell you if we need up to 45 more. We may need to verify your identity first. You can use an authorized agent if you give them written permission.</p>
+<p>We won't charge you more or give you a worse service for using these rights.</p>
+<h3>Appeals</h3>
+<p>If we deny your request, you can appeal by replying to our decision. If you disagree with the result of the appeal, you can contact your state attorney general.</p>
+<h3>California residents</h3>
+<p>This table describes what we collected in the past 12 months, as required by the California Consumer Privacy Act.</p>
+<div class="tbl"><table><thead><tr><th>Category</th><th>Examples</th><th>Source</th><th>Purpose</th><th>Disclosed to</th></tr></thead><tbody><tr><td>Identifiers</td><td>Name, email, account ID, optional phone</td><td>You</td><td>Provide the service, support, security</td><td>Hosting, email, SMS, support providers</td></tr><tr><td>Customer records</td><td>Vehicle details, Glovebox documents</td><td>You; VIN lookup</td><td>Provide the service</td><td>Hosting provider</td></tr><tr><td>Commercial information</td><td>Plan, trial and renewal status; expenses you log</td><td>You; Apple and Google</td><td>Billing, provide the service</td><td>Hosting provider; accounting apps you connect</td></tr><tr><td>Geolocation (sensitive)</td><td>Precise location during trips; trip routes; places</td><td>Your device, with permission</td><td>Trip logging, place recognition, shop search, emergency sharing you start</td><td>Hosting and maps providers; emergency contacts you choose</td></tr><tr><td>Audio and electronic information</td><td>Voice transcripts (audio is discarded)</td><td>You</td><td>Voice commands</td><td>Speech recognition provider, if speech is processed off-device</td></tr><tr><td>Internet or device activity</td><td>App usage, crash logs</td><td>Your device</td><td>Improve and secure the app</td><td>Crash reporting provider</td></tr><tr><td>Professional information</td><td>Taxpayer type (self-employed, W-2), business purpose of trips</td><td>You</td><td>Correct reports for your situation</td><td>Hosting provider; exports you send</td></tr><tr><td>Sensitive personal information</td><td>Precise location; places labelled medical or charitable; incident records</td><td>You; your device</td><td>Only to provide the features you use</td><td>Not disclosed except as you direct</td></tr></tbody></table></div></section><section id="consumer-health-data"><h2>Consumer health data</h2><p>Some states, including Washington and Nevada, protect "consumer health data". If you label a place as medical or healthcare, the fact that you visit it could count as health data under those laws.</p>
+<ul>
+<li>We collect it only when you choose to label a place that way, and you can delete the label anytime.</li>
+<li>We use it only to classify your medical trips and calculate any medical mileage you ask for.</li>
+<li>We never sell it, never use it for advertising, and never include it in analytics.</li>
+<li>To access or delete it, use the Places screen or email <a href="mailto:contact@carcare.help">contact@carcare.help</a>.</li>
+</ul></section><section id="security"><h2>Security</h2><p>We encrypt data in transit and at rest, limit staff access to what their job requires, and monitor our systems for misuse. No system is perfectly secure. If a breach affects your personal information, we'll notify you as the law requires.</p></section><section id="children"><h2>Children</h2><p>CarCare is for adults 18 and older. It is not directed to children, and we don't knowingly collect personal information from anyone under 13. If you believe a child has given us information, contact us and we'll delete it.</p></section><section id="do-not-track-and-global-privacy-control"><h2>Do Not Track and Global Privacy Control</h2><p>Because we don't sell or share personal information for advertising, there's nothing to opt out of. We still honor the Global Privacy Control signal from browsers that send it. Our website doesn't respond differently to "Do Not Track" signals, and it doesn't use advertising trackers.</p></section><section id="users-outside-the-u-s"><h2>Users outside the U.S.</h2><p>CarCare is offered in the United States. If you use it from elsewhere, your information will be processed in the United States.</p></section><section id="changes-to-this-policy"><h2>Changes to this policy</h2><p>If we make a material change, we'll tell you in the app or by email before it takes effect. The date at the top shows when this policy last changed.</p></section><section id="contact-us"><h2>Contact us</h2><p>Questions or requests about privacy:</p><address>Car Registration Help Inc.<br>969 Story Rd, Unit 6021<br>San Jose, CA 95122<br><a href="mailto:contact@carcare.help">contact@carcare.help</a></address></section></div>
+  </div>
+</div>
+</main>
+<footer><div class="wrap">
+  <span>© 2026 Car Registration Help Inc. · 969 Story Rd, Unit 6021, San Jose, CA 95122</span>
+  <nav aria-label="Footer"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="mailto:contact@carcare.help">contact@carcare.help</a></nav>
+</div></footer>
+</body>
+</html>

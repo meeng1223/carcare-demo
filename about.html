@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>About CarCare.help</title>
+<meta name="description" content="CarCare.help is the all-in-one car-ownership app from Car Registration Help Inc. in San Jose, California.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --paper:#F3F5FA; --surface:#FFFFFF; --ink:#0A1F44; --ink-2:#4B5A7A; --line:#DCE2EE;
+  --navy:#0E2A63; --on-navy:#EAF0FA; --on-navy-2:#A9B8D6;
+  --orange:#F26A1B; --orange-ink:#BF4A08; --orange-soft:#FFE7D6;
+  --display:"Lexend","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Source Sans 3","Source Sans Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#06122B; --surface:#0C1D3F; --ink:#EEF2F9; --ink-2:#9DAAC4; --line:#1D3159;
+  --navy:#0F2C69; --orange:#FF7A2E; --orange-ink:#FF8E4F; --orange-soft:#3A2414; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#06122B; --surface:#0C1D3F; --ink:#EEF2F9; --ink-2:#9DAAC4; --line:#1D3159;
+  --navy:#0F2C69; --orange:#FF7A2E; --orange-ink:#FF8E4F; --orange-soft:#3A2414; color-scheme:dark}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:var(--orange-ink)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.025em;line-height:1.1;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.3rem,5vw,3.8rem);font-weight:800}
+h2{font-size:clamp(1.45rem,2.6vw,1.9rem);font-weight:700}
+h3{font-size:1.15rem;font-weight:700;letter-spacing:-.015em}
+p{margin:0}
+.eyebrow{font-family:var(--display);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-ink);font-weight:600;display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:3px;border-radius:3px;background:currentColor}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:70px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--display);font-weight:800;font-size:1.3rem;letter-spacing:-.03em}
+.brand svg{width:34px;height:38px;flex:none}
+.tld{color:var(--orange)}
+.nav-links{display:flex;gap:26px;margin-left:auto;font-family:var(--display);font-weight:500;font-size:.95rem}
+.nav-links a{text-decoration:none;color:var(--ink-2)}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--ink)}
+.nav-links a[aria-current]{box-shadow:inset 0 -3px 0 var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:.55em;font:600 .92rem/1 var(--display);padding:.7rem 1.15rem;min-height:44px;border-radius:999px;text-decoration:none;background:var(--orange);color:#fff}
+@media (max-width:760px){.nav-links{display:none}.nav .btn{margin-left:auto}}
+.page-head{padding-block:64px 40px;display:flex;flex-direction:column;gap:18px}
+.page-head .lede{font-size:1.2rem;color:var(--ink-2);max-width:60ch}
+.meta{font-size:.95rem;color:var(--ink-2)}
+.doc{display:grid;grid-template-columns:240px minmax(0,1fr);gap:56px;padding-bottom:96px;align-items:start}
+.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 92px);font-size:.93rem;max-height:calc(100vh - 120px);overflow:auto}
+.toc h2{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--ink-2);margin-bottom:12px}
+.toc ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;border-left:2px solid var(--line)}
+.toc a{display:block;padding:5px 0 5px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--ink-2);text-decoration:none;line-height:1.35}
+.toc a:hover{color:var(--ink);border-left-color:var(--orange)}
+@media (max-width:900px){.doc{grid-template-columns:1fr;gap:28px}.toc{position:static;max-height:none;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}}
+.body{display:flex;flex-direction:column;gap:48px;min-width:0;max-width:760px}
+.body section{display:flex;flex-direction:column;gap:16px;scroll-margin-top:90px}
+.body p,.body li{color:var(--ink-2)}
+.body strong{color:var(--ink)}
+.body ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:8px}
+.body h3{margin-top:8px}
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:14px;padding:20px 24px;display:flex;flex-direction:column;gap:10px}
+.callout.dark{background:var(--navy);border-color:var(--navy);border-left-color:var(--orange)}
+.callout.dark p,.callout.dark li,.callout.dark strong,.callout.dark h3{color:var(--on-navy)}
+.caps{text-transform:uppercase;font-size:.92rem;letter-spacing:.01em}
+.summary{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.summary div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+.summary b{font-family:var(--display);font-weight:600;font-size:1.02rem;color:var(--ink);letter-spacing:-.01em}
+.summary span{color:var(--ink-2);font-size:.97rem;line-height:1.5}
+@media (max-width:620px){.summary{grid-template-columns:1fr}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.93rem;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+th{font-family:var(--display);font-weight:600;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);background:color-mix(in srgb,var(--paper) 60%,var(--surface))}
+td{color:var(--ink-2)}
+tr:last-child td{border-bottom:0}
+td:first-child{color:var(--ink);font-weight:600}
+address{font-style:normal;color:var(--ink-2);line-height:1.6}
+/* about */
+.hero-about{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding-block:64px 72px}
+.hero-about img{width:100%;max-width:340px;justify-self:center;border-radius:28px;background:#fff;box-shadow:0 30px 60px -30px rgba(10,31,68,.45)}
+.hero-about .lede{font-size:1.25rem;color:var(--ink-2);max-width:54ch}
+@media (max-width:860px){.hero-about{grid-template-columns:1fr}.hero-about img{max-width:220px;justify-self:start}}
+.band{padding-block:0 88px}
+.math{background:var(--navy);color:var(--on-navy);border-radius:28px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.math .eyebrow{color:var(--orange)}
+.math p{color:var(--on-navy-2)}
+.eq{display:flex;flex-direction:column;gap:10px;font-family:var(--display)}
+.eq div{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.07);font-weight:600;font-variant-numeric:tabular-nums}
+.eq div:last-child{background:var(--orange);color:#fff}
+@media (max-width:860px){.math{grid-template-columns:1fr;padding:32px 22px}}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card p{color:var(--ink-2);font-size:1rem}
+@media (max-width:900px){.grid3{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.grid3{grid-template-columns:1fr}}
+.sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:32px;max-width:760px}
+.sec-head p{color:var(--ink-2);font-size:1.1rem}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:ph}
+.timeline .card{border-top:4px solid var(--line)}
+.timeline .card.now{border-top-color:var(--orange)}
+.tagline{font-family:var(--display);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.now .tagline{color:var(--orange-ink)}
+@media (max-width:860px){.timeline{grid-template-columns:1fr}}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:700px){.contact{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding-block:32px 40px;color:var(--ink-2);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer nav{display:flex;flex-wrap:wrap;gap:20px}
+footer a{color:var(--ink-2);text-decoration:none}
+footer a:hover{color:var(--orange-ink)}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html" aria-label="CarCare.help home"><svg viewBox="0 0 34 38" aria-hidden="true"><path d="M17 1 32 6v12c0 9.5-6.4 15.6-15 19C8.4 33.6 2 27.5 2 18V6z" fill="var(--navy)" stroke="var(--orange)" stroke-width="2"/><text x="17" y="24" text-anchor="middle" font-family="Lexend,Avenir Next,sans-serif" font-weight="800" font-size="12" fill="#fff">CC</text></svg><span>CarCare<span class="tld">.help</span></span></a>
+  <nav class="nav-links" aria-label="Main"><a href="index.html">Home</a><a href="about.html" aria-current="page">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  <a class="btn" href="index.html#download">Get early access</a>
+</div></header>
+<main>
+<div class="wrap">
+  <div class="hero-about">
+    <div style="display:flex;flex-direction:column;gap:22px;min-width:0">
+      <span class="eyebrow">About CarCare</span>
+      <h1>We help drivers keep more of what their car earns them.</h1>
+      <p class="lede">CarCare.help is the all-in-one car-ownership app from Car Registration Help Inc. in San Jose, California. It captures every mile, logs every expense, reminds you before service is due and finds any shop nearby, so your car's paperwork takes care of itself.</p>
+    </div>
+    <img src="assets/carcare-logo.jpg" alt="CarCare.help logo: a smiling mechanic with a wrench beside a blue car, under a 24/7 arc">
+  </div>
+</div>
+
+<section class="band"><div class="wrap">
+  <div class="math">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span class="eyebrow">Why we started with mileage</span>
+      <h2>Most drivers leave money on the road.</h2>
+      <p>Self-employed and gig drivers under-claim an estimated 20 to 40 percent of their eligible business miles, mostly because keeping a log is tedious. So we built the app to keep the log for you. It should pay for itself, and it should be useful from the first drive, before we ask anything else of you.</p>
+    </div>
+    <div class="eq" aria-label="Example deduction math">
+      <div><span>Business miles in a year</span><span>15,000</span></div>
+      <div><span>2026 IRS standard rate</span><span>72.5¢ / mile</span></div>
+      <div><span>Possible deduction, up to</span><span>$10,875</span></div>
+    </div>
+  </div>
+  <p style="color:var(--ink-2);font-size:.92rem;margin-top:12px">Example only, using the IRS standard mileage rate for 2026. Your actual tax savings depend on your situation. CarCare is not tax advice.</p>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">What we believe</span><h2>Six promises we built into the product.</h2><p>These aren't just policies. Each one is enforced in how CarCare is built.</p></div>
+  <div class="grid3">
+    <div class="card"><h3>Your data isn't for sale</h3><p>We earn money from subscriptions, not from selling where you drive or what you spend.</p></div>
+    <div class="card"><h3>Safety is never behind a paywall</h3><p>Emergency features are free on every plan, and we never show an upgrade prompt when you need help.</p></div>
+    <div class="card"><h3>You decide what a place is</h3><p>CarCare never guesses why you went somewhere. Medical and charity visits get extra protection.</p></div>
+    <div class="card"><h3>We don't keep your voice</h3><p>Speech becomes text and the audio is discarded. No always-on listening, ever.</p></div>
+    <div class="card"><h3>Every shop on the map</h3><p>We show every nearby shop, not just the ones that pay us, and searching is free.</p></div>
+    <div class="card"><h3>Straight answers about money</h3><p>Our numbers are estimates with sources, never guarantees. We'll tell you when to ask a professional.</p></div>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Where we're going</span><h2>From your glovebox to your whole car.</h2></div>
+  <div class="timeline">
+    <div class="card now"><span class="tagline">Now</span><h3>The car-ownership app</h3><p>Automatic mileage, receipts, service reminders, the shop finder, the AI Service Advisor and hands-free voice, on iPhone and Android.</p></div>
+    <div class="card"><span class="tagline">Next</span><h3>Safety and sharing</h3><p>Roadside help, emergency alerts, sharing a car with your household, CarPlay and connected-car data.</p></div>
+    <div class="card"><span class="tagline">Later</span><h3>Booking with trusted shops</h3><p>Book service with partner shops right from the map. Every other shop stays visible, just as it is today.</p></div>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Get in touch</span><h2>Talk to the team.</h2></div>
+  <div class="contact">
+    <div class="card"><h3>Email</h3><p>Questions, partnerships, press and support:<br><a href="mailto:contact@carcare.help">contact@carcare.help</a></p></div>
+    <div class="card"><h3>Mail</h3><address>Car Registration Help Inc.<br>969 Story Rd, Unit 6021<br>San Jose, CA 95122</address></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap">
+  <span>© 2026 Car Registration Help Inc. · 969 Story Rd, Unit 6021, San Jose, CA 95122</span>
+  <nav aria-label="Footer"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="mailto:contact@carcare.help">contact@carcare.help</a></nav>
+</div></footer>
+</body>
+</html>

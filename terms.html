@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>CarCare Terms of Service</title>
+<meta name="description" content="The agreement for using CarCare.help, including how subscriptions, estimates and safety features work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --paper:#F3F5FA; --surface:#FFFFFF; --ink:#0A1F44; --ink-2:#4B5A7A; --line:#DCE2EE;
+  --navy:#0E2A63; --on-navy:#EAF0FA; --on-navy-2:#A9B8D6;
+  --orange:#F26A1B; --orange-ink:#BF4A08; --orange-soft:#FFE7D6;
+  --display:"Lexend","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Source Sans 3","Source Sans Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#06122B; --surface:#0C1D3F; --ink:#EEF2F9; --ink-2:#9DAAC4; --line:#1D3159;
+  --navy:#0F2C69; --orange:#FF7A2E; --orange-ink:#FF8E4F; --orange-soft:#3A2414; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#06122B; --surface:#0C1D3F; --ink:#EEF2F9; --ink-2:#9DAAC4; --line:#1D3159;
+  --navy:#0F2C69; --orange:#FF7A2E; --orange-ink:#FF8E4F; --orange-soft:#3A2414; color-scheme:dark}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:var(--orange-ink)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.025em;line-height:1.1;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.3rem,5vw,3.8rem);font-weight:800}
+h2{font-size:clamp(1.45rem,2.6vw,1.9rem);font-weight:700}
+h3{font-size:1.15rem;font-weight:700;letter-spacing:-.015em}
+p{margin:0}
+.eyebrow{font-family:var(--display);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-ink);font-weight:600;display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:3px;border-radius:3px;background:currentColor}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:70px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--display);font-weight:800;font-size:1.3rem;letter-spacing:-.03em}
+.brand svg{width:34px;height:38px;flex:none}
+.tld{color:var(--orange)}
+.nav-links{display:flex;gap:26px;margin-left:auto;font-family:var(--display);font-weight:500;font-size:.95rem}
+.nav-links a{text-decoration:none;color:var(--ink-2)}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--ink)}
+.nav-links a[aria-current]{box-shadow:inset 0 -3px 0 var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:.55em;font:600 .92rem/1 var(--display);padding:.7rem 1.15rem;min-height:44px;border-radius:999px;text-decoration:none;background:var(--orange);color:#fff}
+@media (max-width:760px){.nav-links{display:none}.nav .btn{margin-left:auto}}
+.page-head{padding-block:64px 40px;display:flex;flex-direction:column;gap:18px}
+.page-head .lede{font-size:1.2rem;color:var(--ink-2);max-width:60ch}
+.meta{font-size:.95rem;color:var(--ink-2)}
+.doc{display:grid;grid-template-columns:240px minmax(0,1fr);gap:56px;padding-bottom:96px;align-items:start}
+.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 92px);font-size:.93rem;max-height:calc(100vh - 120px);overflow:auto}
+.toc h2{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--ink-2);margin-bottom:12px}
+.toc ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;border-left:2px solid var(--line)}
+.toc a{display:block;padding:5px 0 5px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--ink-2);text-decoration:none;line-height:1.35}
+.toc a:hover{color:var(--ink);border-left-color:var(--orange)}
+@media (max-width:900px){.doc{grid-template-columns:1fr;gap:28px}.toc{position:static;max-height:none;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}}
+.body{display:flex;flex-direction:column;gap:48px;min-width:0;max-width:760px}
+.body section{display:flex;flex-direction:column;gap:16px;scroll-margin-top:90px}
+.body p,.body li{color:var(--ink-2)}
+.body strong{color:var(--ink)}
+.body ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:8px}
+.body h3{margin-top:8px}
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:14px;padding:20px 24px;display:flex;flex-direction:column;gap:10px}
+.callout.dark{background:var(--navy);border-color:var(--navy);border-left-color:var(--orange)}
+.callout.dark p,.callout.dark li,.callout.dark strong,.callout.dark h3{color:var(--on-navy)}
+.caps{text-transform:uppercase;font-size:.92rem;letter-spacing:.01em}
+.summary{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.summary div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+.summary b{font-family:var(--display);font-weight:600;font-size:1.02rem;color:var(--ink);letter-spacing:-.01em}
+.summary span{color:var(--ink-2);font-size:.97rem;line-height:1.5}
+@media (max-width:620px){.summary{grid-template-columns:1fr}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.93rem;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+th{font-family:var(--display);font-weight:600;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);background:color-mix(in srgb,var(--paper) 60%,var(--surface))}
+td{color:var(--ink-2)}
+tr:last-child td{border-bottom:0}
+td:first-child{color:var(--ink);font-weight:600}
+address{font-style:normal;color:var(--ink-2);line-height:1.6}
+/* about */
+.hero-about{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding-block:64px 72px}
+.hero-about img{width:100%;max-width:340px;justify-self:center;border-radius:28px;background:#fff;box-shadow:0 30px 60px -30px rgba(10,31,68,.45)}
+.hero-about .lede{font-size:1.25rem;color:var(--ink-2);max-width:54ch}
+@media (max-width:860px){.hero-about{grid-template-columns:1fr}.hero-about img{max-width:220px;justify-self:start}}
+.band{padding-block:0 88px}
+.math{background:var(--navy);color:var(--on-navy);border-radius:28px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.math .eyebrow{color:var(--orange)}
+.math p{color:var(--on-navy-2)}
+.eq{display:flex;flex-direction:column;gap:10px;font-family:var(--display)}
+.eq div{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.07);font-weight:600;font-variant-numeric:tabular-nums}
+.eq div:last-child{background:var(--orange);color:#fff}
+@media (max-width:860px){.math{grid-template-columns:1fr;padding:32px 22px}}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card p{color:var(--ink-2);font-size:1rem}
+@media (max-width:900px){.grid3{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.grid3{grid-template-columns:1fr}}
+.sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:32px;max-width:760px}
+.sec-head p{color:var(--ink-2);font-size:1.1rem}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:ph}
+.timeline .card{border-top:4px solid var(--line)}
+.timeline .card.now{border-top-color:var(--orange)}
+.tagline{font-family:var(--display);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.now .tagline{color:var(--orange-ink)}
+@media (max-width:860px){.timeline{grid-template-columns:1fr}}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:700px){.contact{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding-block:32px 40px;color:var(--ink-2);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer nav{display:flex;flex-wrap:wrap;gap:20px}
+footer a{color:var(--ink-2);text-decoration:none}
+footer a:hover{color:var(--orange-ink)}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html" aria-label="CarCare.help home"><svg viewBox="0 0 34 38" aria-hidden="true"><path d="M17 1 32 6v12c0 9.5-6.4 15.6-15 19C8.4 33.6 2 27.5 2 18V6z" fill="var(--navy)" stroke="var(--orange)" stroke-width="2"/><text x="17" y="24" text-anchor="middle" font-family="Lexend,Avenir Next,sans-serif" font-weight="800" font-size="12" fill="#fff">CC</text></svg><span>CarCare<span class="tld">.help</span></span></a>
+  <nav class="nav-links" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html" aria-current="page">Terms</a></nav>
+  <a class="btn" href="index.html#download">Get early access</a>
+</div></header>
+<main>
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow">Legal</span>
+    <h1>Terms of Service</h1>
+    <p class="lede">The agreement for using CarCare.help, including how subscriptions, estimates and safety features work.</p>
+    <p class="meta">Last updated October 18, 2026</p>
+  </div>
+  <div class="doc">
+    <nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#agreement">Agreement</a></li><li><a href="#who-can-use-carcare">Who can use CarCare</a></li><li><a href="#your-account">Your account</a></li><li><a href="#what-carcare-is-and-what-it-isn-t">What CarCare is, and what it isn't</a></li><li><a href="#ai-service-advisor">AI Service Advisor</a></li><li><a href="#emergency-and-roadside-features">Emergency and roadside features</a></li><li><a href="#driving-safely">Driving safely</a></li><li><a href="#plans-free-trials-and-billing">Plans, free trials and billing</a></li><li><a href="#referral-rewards">Referral rewards</a></li><li><a href="#sharing-a-vehicle-with-your-household">Sharing a vehicle with your household</a></li><li><a href="#your-data-and-content">Your data and content</a></li><li><a href="#third-party-services">Third-party services</a></li><li><a href="#acceptable-use">Acceptable use</a></li><li><a href="#our-intellectual-property">Our intellectual property</a></li><li><a href="#changes-and-ending-the-service">Changes and ending the service</a></li><li><a href="#disclaimers">Disclaimers</a></li><li><a href="#limitation-of-liability">Limitation of liability</a></li><li><a href="#indemnity">Indemnity</a></li><li><a href="#disputes-and-arbitration">Disputes and arbitration</a></li><li><a href="#governing-law">Governing law</a></li><li><a href="#apple-and-google-terms">Apple and Google terms</a></li><li><a href="#general">General</a></li><li><a href="#contact">Contact</a></li></ol></nav>
+    <div class="body"><div class="callout"><p><strong>Please read <a href="#disputes-and-arbitration">Disputes and arbitration</a>.</strong> That section requires most disputes to be settled by individual arbitration instead of in court, and waives class actions. You can opt out within 30 days of accepting these terms.</p></div><section id="agreement"><h2>Agreement</h2><p>These Terms of Service ("Terms") are an agreement between you and Car Registration Help Inc. ("CarCare", "we", "us") for the CarCare.help app and website (together, "CarCare"). By creating an account or using CarCare, you agree to these Terms and to our <a href="privacy.html">Privacy Policy</a>.</p></section><section id="who-can-use-carcare"><h2>Who can use CarCare</h2><p>You must be at least 18, live in the United States, and be able to enter a binding contract. You may use CarCare for yourself or for your business. If you use it for a business, you confirm you're allowed to accept these Terms on its behalf.</p></section><section id="your-account"><h2>Your account</h2><p>You can sign up with email and password, Apple or Google. Keep your login details private and tell us right away if you think someone else has accessed your account. You're responsible for what happens in your account.</p></section><section id="what-carcare-is-and-what-it-isn-t"><h2>What CarCare is, and what it isn't</h2><div class="callout dark"><p><strong>CarCare is a record-keeping tool. It is not a tax advisor, accountant or lawyer, and nothing in CarCare is tax, legal or financial advice.</strong></p></div>
+<ul>
+<li><strong>Estimates only.</strong> Mileage values, deduction and reimbursement figures, business-use percentages and method comparisons are estimates based on the information you enter and on published IRS rates. Your actual tax result depends on facts we don't know. Ask a qualified tax professional before you file.</li>
+<li><strong>We never file anything.</strong> CarCare doesn't file returns or submit anything to the IRS or any tax authority. You decide what to use and how.</li>
+<li><strong>You're responsible for your records.</strong> Automatic trip detection, receipt reading and place recognition can make mistakes. Review your trips, purposes and expenses and correct them before relying on them.</li>
+<li><strong>Audit Confidence Score.</strong> The score measures how complete your records are. It doesn't predict or guarantee the outcome of any audit.</li>
+<li><strong>W-2 employees.</strong> CarCare produces reimbursement reports for employers. Whether your employer reimburses you, and how much, is up to your employer.</li>
+</ul></section><section id="ai-service-advisor"><h2>AI Service Advisor</h2><p>The AI Service Advisor gives general information about cars. Its answers can be wrong or incomplete. It is not a substitute for an inspection by a certified mechanic, and you should always have a professional check anything that affects safety, such as brakes, steering, tires or warning lights. Don't rely on it for medical or legal questions. Free accounts can ask 5 questions a day, resetting at midnight in your home time zone.</p></section><section id="emergency-and-roadside-features"><h2>Emergency and roadside features</h2><div class="callout dark"><h3>CarCare is not an emergency service</h3>
+<p>CarCare does not contact 911 or any emergency service for you, does not dispatch help, and cannot guarantee that an alert to your contacts will be delivered. It is not a substitute for calling 911. <strong>In an emergency, call 911 yourself.</strong></p></div>
+<ul>
+<li><strong>Emergency alerts</strong> send your live location to the contacts you choose, when you trigger them. Delivery depends on your phone, network and location services.</li>
+<li><strong>Incident records</strong> are your own records. We make no promise that they will be enough for any police report, insurance claim or legal proceeding.</li>
+<li><strong>Roadside assistance</strong> helps you find and call your own roadside provider, insurer or warranty company, or a nearby business. CarCare does not provide roadside service, send anyone to you, or promise how fast help will arrive.</li>
+<li>Emergency features are free on every plan.</li>
+</ul></section><section id="driving-safely"><h2>Driving safely</h2><p>Your attention belongs on the road. Don't read or type in the app while driving. Use Drive Mode, voice commands or CarPlay only when it's safe and legal where you are, and pull over for anything else. Follow all traffic laws. CarCare holds non-urgent notifications while Drive Mode is on, but you remain responsible for how you use your phone in the car.</p></section><section id="plans-free-trials-and-billing"><h2>Plans, free trials and billing</h2><ul>
+<li><strong>Plans.</strong> CarCare offers a free plan and paid Plus and Pro plans. Current prices and features are shown in the app before you buy.</li>
+<li><strong>Billing through the stores.</strong> Subscriptions are bought and billed through the Apple App Store or Google Play, under their terms.</li>
+<li><strong>Free trial.</strong> Plus and Pro may include a 30-day free trial. When the trial ends, your subscription starts and you're charged automatically unless you cancel at least 24 hours before the trial ends.</li>
+<li><strong>Automatic renewal.</strong> Plus renews every month or year, and Pro renews every year, at the price shown when you subscribed, until you cancel. We'll tell you in advance about any price change, and you can cancel before it applies.</li>
+<li><strong>How to cancel.</strong> Cancel anytime in your Apple ID or Google Play subscription settings. The app's "Manage Subscription" button takes you there. You keep paid features until the end of the current period.</li>
+<li><strong>Refunds.</strong> Apple and Google handle all refunds under their policies. CarCare can't issue refunds directly.</li>
+<li><strong>Downgrading.</strong> If your paid plan ends, your data stays and remains visible. Paid features such as exports and accounting sync stop, and vehicles above the free limit become inactive until you resubscribe. Records you created while subscribed stay as they were.</li>
+<li><strong>Family Sharing.</strong> Where the store supports it, family members can use your subscription with their own CarCare accounts. Their data is never combined with yours.</li>
+</ul></section><section id="referral-rewards"><h2>Referral rewards</h2><ul>
+<li>Rewards are free subscription periods issued as Apple or Google promotional codes and redeemed in the store. They have no cash value and can't be exchanged for credit, money or gift cards.</li>
+<li>A referral qualifies when the person you invited creates an account and, within 30 days, either captures 10 trips or starts a paid subscription.</li>
+<li>Up to 10 qualified referrals per account per year earn a reward. You can't refer yourself.</li>
+<li>We may hold a reward for review, or cancel rewards obtained by fraud or abuse. We may change or end the program with notice; rewards already earned will still be honored.</li>
+</ul></section><section id="sharing-a-vehicle-with-your-household"><h2>Sharing a vehicle with your household</h2><p>On Plus and Pro you can invite household members to share a vehicle. Each person keeps their own account, trips, expenses and tax figures. Sharing never combines them.</p>
+<p>If more than one person logs business miles on the same vehicle in a tax year, each of you should claim only your own miles, and only one of you can use the actual-expense method for that vehicle. CarCare will remind you, but it doesn't decide who may claim what. Check with your tax professional.</p></section><section id="your-data-and-content"><h2>Your data and content</h2><p>You own the data and content you put into CarCare, including trips, receipts, documents and notes. You give us permission to store, process and display it only as needed to run CarCare for you, as described in the Privacy Policy. You can export your records on paid plans and delete your account at any time.</p></section><section id="third-party-services"><h2>Third-party services</h2><p>CarCare works with services we don't control, such as Apple, Google, Google Maps, QuickBooks, Xero and Smartcar. Your use of them is governed by their own terms. Shop listings, ratings and hours come from third parties. We don't endorse any shop or guarantee its work, prices or availability.</p></section><section id="acceptable-use"><h2>Acceptable use</h2><p>Don't misuse CarCare. In particular, don't:</p>
+<ul>
+<li>enter information you know is false to create misleading tax or reimbursement records;</li>
+<li>track another person's location without their consent;</li>
+<li>abuse the emergency features, for example by sending false alerts;</li>
+<li>break the law, infringe others' rights, or upload harmful code;</li>
+<li>copy, scrape, reverse-engineer or resell CarCare, or try to get around plan limits or security.</li>
+</ul></section><section id="our-intellectual-property"><h2>Our intellectual property</h2><p>CarCare, its software, design and content belong to Car Registration Help Inc. and its licensors. CarCare.help™, VehicleVault™, VehicleLedger™ and Audit Confidence Score™ are our trademarks. We give you a personal, non-transferable, revocable license to use the app on devices you own or control, under these Terms. If you send us feedback, we may use it without owing you anything.</p></section><section id="changes-and-ending-the-service"><h2>Changes and ending the service</h2><p>We may add, change or remove features. You can stop using CarCare at any time. We may suspend or close your account if you seriously or repeatedly break these Terms, or if the law requires it. Before closing an account for reasons other than abuse or legal requirements, we'll give you notice and a chance to export your data.</p></section><section id="disclaimers"><h2>Disclaimers</h2><p class="caps">CarCare is provided "as is" and "as available". To the fullest extent the law allows, we disclaim all warranties, express or implied, including merchantability, fitness for a particular purpose and non-infringement. We don't promise that CarCare will be uninterrupted or error-free, that it will detect every trip or read every receipt correctly, or that any estimate will match your tax result.</p></section><section id="limitation-of-liability"><h2>Limitation of liability</h2><p class="caps">To the fullest extent the law allows, CarCare will not be liable for indirect, incidental, special, consequential or punitive damages, or for lost profits, tax penalties, interest or lost data. Our total liability for any claim relating to CarCare is limited to the greater of the amount you paid us in the 12 months before the claim or $100.</p>
+<p>Some states don't allow some of these limits, so they may not all apply to you.</p></section><section id="indemnity"><h2>Indemnity</h2><p>If you use CarCare in breach of these Terms or the law, and a third party brings a claim against us because of it, you agree to cover our reasonable losses and costs from that claim.</p></section><section id="disputes-and-arbitration"><h2>Disputes and arbitration</h2><ul>
+<li><strong>Talk to us first.</strong> Email <a href="mailto:contact@carcare.help">contact@carcare.help</a> with a description of the problem. We'll try to resolve it informally within 60 days.</li>
+<li><strong>Arbitration.</strong> If we can't, you and CarCare agree to resolve any dispute through binding individual arbitration administered by the American Arbitration Association under its Consumer Arbitration Rules. Arbitration can take place by video or in the county where you live.</li>
+<li><strong>Small claims.</strong> Either of us may bring an individual claim in small claims court instead.</li>
+<li><strong>No class actions.</strong> Claims may be brought only individually, not as a plaintiff or class member in any class or representative action.</li>
+<li><strong>Opting out.</strong> You can opt out of arbitration by emailing <a href="mailto:contact@carcare.help">contact@carcare.help</a> within 30 days of first accepting these Terms, with your name, account email and a clear statement that you opt out.</li>
+</ul></section><section id="governing-law"><h2>Governing law</h2><p>These Terms are governed by the laws of the State of California and applicable U.S. federal law. Any claim not subject to arbitration will be heard in the state or federal courts located in Santa Clara County, California.</p></section><section id="apple-and-google-terms"><h2>Apple and Google terms</h2><p>If you downloaded CarCare from the Apple App Store, you agree that these Terms are between you and CarCare, not Apple. Apple has no obligation to provide maintenance or support and is not responsible for the app, for any claims about it, or for any third-party intellectual property claims. If the app fails to meet a warranty, you may notify Apple for a refund of the purchase price, if any. Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them. Google Play purchases are also subject to Google Play's terms.</p></section><section id="general"><h2>General</h2><p>If any part of these Terms can't be enforced, the rest still applies. If we don't enforce a term right away, we haven't given up the right to. You can't transfer these Terms without our consent; we may transfer them as part of a merger or sale. These Terms and the Privacy Policy are the whole agreement between us about CarCare. We'll give notice in the app or by email before material changes take effect.</p></section><section id="contact"><h2>Contact</h2><address>Car Registration Help Inc.<br>969 Story Rd, Unit 6021<br>San Jose, CA 95122<br><a href="mailto:contact@carcare.help">contact@carcare.help</a></address></section></div>
+  </div>
+</div>
+</main>
+<footer><div class="wrap">
+  <span>© 2026 Car Registration Help Inc. · 969 Story Rd, Unit 6021, San Jose, CA 95122</span>
+  <nav aria-label="Footer"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="mailto:contact@carcare.help">contact@carcare.help</a></nav>
+</div></footer>
+</body>
+</html>
